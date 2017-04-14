@@ -4,18 +4,50 @@
         <title>
             CSC 412 Introduction Page
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel = "stylesheet" type = "text/css" href ="site.css">
+        <link href='//fonts.googleapis.com/css?family=Athiti' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#hide").click(function(){
+                $("#hide").hide();
+                $("p").css("color", "red").slideUp(5000).text("I TOLD YOU NOT TO CLICK").alert("ITOLDYOU")
+                });
+            });
+        </script>
     </head>
-    <h1>Hello world!</h1>
-    <p> This is the page for csc412 <p>
-    <p> "It isn't that they can't see the solution. It's that they can't see
-        the problem" ~<i> Gilbert Keith Chesterton via @quotedojo</i><p>
-    <div>
-        <a href = "about.html">about this site</a>
-    </div> 
-    <div>
-        <a href ="current.html">current</a>
+    <body>
+        <ul>
+            <li><a href = "about.html">about this site</a></li>
+            <li><a href ="projects.html">current</a></li>
+               
+        </ul>
+        
+        <h1 class = "centered" >Hi there!</h1>
+        <p> This is the page for CSC412 </p>
+        <p> "'It isn't that they can't see the solution. It's that they can't see
+        the problem'" ~<i> Gilbert Keith Chesterton via @quotedojo</i></p>
+        
+        <button id = "hide">Don't touch me</button>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+        <button onclick = "changeBackground()">Change Color</button>
+        
+        <script>
+            function changeBackground(){
+                if (document.body.style.backgroundColor === 'white'){
+                    document.body.style.backgroundColor = 'black'
+                }else{
+                    document.body.style.backgroundColor = 'white'
+                }
+            }
+        </script>
+        
+        
+        
+    <p id="demo"></p>
 
-    </div>
     </body>
 </html>
+
+
